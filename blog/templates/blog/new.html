@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="#">글쓰기</a>
+          <a class="nav-item nav-link" href="#">Dropdown</a>
+          <a class="nav-item nav-link disabled" href="#">Disabled</a>
+        </div>
+      </div>
+    </nav>
+    <br>
+    <div class="container">
+	<form action="{% url 'create' %}">
+	  <h4>제목: </h4>
+	  <input type="text" name="title">
+	  <br>
+	  <br>
+	  <h4>본문: </h4>
+	  <textarea cols=40 rows=10 name="body"></textarea>
+	  <br>
+	  <br>
+	  <input class="btn btn-dark" type="submit" value="제출하기">
+  </form>
+</div>
+
+
+  </body>
+</html>
